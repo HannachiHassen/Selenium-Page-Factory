@@ -14,6 +14,7 @@ public class Base {
 
 		driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://www.homedepot.com/");
